@@ -15,18 +15,13 @@
     </properties>
 
     <repositories>
-        <!-- Ensure PlaceholderAPI repository is explicitly defined for resolution -->
         <repository>
-            <id>placeholderapi-repo</id>
-            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
         </repository>
         <repository>
             <id>minecraft-repo</id>
@@ -41,10 +36,9 @@
             <version>1.21.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <!-- Changed groupId and repository source to match the ExtendedClip format -->
         <dependency>
-            <groupId>me.clip</groupId>
-            <artifactId>placeholderapi</artifactId>
+            <groupId>com.github.extendedclip</groupId>
+            <artifactId>PlaceholderAPI</artifactId>
             <version>2.11.1</version>
             <scope>provided</scope>
         </dependency>
