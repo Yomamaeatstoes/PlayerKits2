@@ -15,7 +15,6 @@
     </properties>
 
     <repositories>
-        <!-- Moved JitPack to the top for better dependency resolution -->
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
@@ -41,7 +40,6 @@
             <version>1.21.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <!-- Corrected groupId and artifactId for PlaceholderAPI using JitPack -->
         <dependency>
             <groupId>com.github.extendedclip</groupId>
             <artifactId>PlaceholderAPI</artifactId>
@@ -71,6 +69,7 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
@@ -93,9 +92,6 @@
                                 <relocation>
                                     <pattern>com.zaxxer.hikari</pattern>
                                     <shadedPattern>pk.ajneb97.libs.hikaricp</shadedPattern>
-                                    <includes>
-                                        <include>com.zaxxer.hikari.**</include>
-                                    </includes>
                                 </relocation>
                             </relocations>
                         </configuration>
